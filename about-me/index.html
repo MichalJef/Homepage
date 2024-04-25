@@ -1,0 +1,161 @@
+      <!DOCTYPE html>
+      <html>
+      <script src="https://kit.fontawesome.com/32c2836d5c.js" crossorigin="anonymous"></script>
+          
+        <head>
+          <style>
+            body {
+              margin: 0;
+              padding: 0;
+              font-family: Arial, sans-serif;
+              color: #fff;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+              position: relative;
+              background-image: url('panaroma.jpg');
+              background-size: cover;
+              background-position: center;
+              overflow: hidden;
+            }
+
+            #overlay {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            .navbar {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              background-color: rgba(0, 0, 0, 0.7);
+              display: flex;
+              justify-content: space-between;
+              padding: 10px 20px;
+              box-sizing: border-box;
+              z-index: 2;
+            }
+
+            .navbar-logo {
+              width: 30px;
+              height: 30px;
+              /* Added height */
+            }
+
+            .navbar-links {
+              display: flex;
+            }
+
+            .navbar-link {
+              margin-right: 20px;
+              text-decoration: none;
+              color: #fff;
+              font-weight: bold;
+              transition: color 0.3s;
+              font-size: 20px;
+            }
+
+            .navbar-link:hover {
+              color: #4CAF50;
+            }
+
+            #simple-text-container {
+              text-align: center;
+              z-index: 1;
+              padding: 20px;
+              font-size: 20px;
+            }
+
+            #logo {
+              position: absolute;
+              top: 20px;
+              left: 20px;
+              width: 50px;
+              height: auto;
+              z-index: 1;
+            }
+
+            #contact {
+              margin-top: 50px;
+            }
+
+            .contact-title {
+              font-size: 24px;
+              margin-bottom: 10px;
+            }
+
+            .contact-button {
+              margin-top: 10px;
+              padding: 10px 20px;
+              background-color: #4CAF50;
+              color: #fff;
+              border: none;
+              border-radius: 5px;
+              font-size: 16px;
+              cursor: pointer;
+              transition: background-color 0.3s;
+              text-decoration: none;
+            }
+
+            .contact-button:hover {
+              background-color: #45a049;
+            }
+          </style>
+        </head>
+
+        <body>
+          <div class="navbar">
+            <img class="navbar-logo" src="../icon.png" alt="Logo">
+            <div class="navbar-links">
+              <a href="../" class="navbar-link">Domů</a>
+              <a href="/search/" class="navbar-link">Vyhledávač</a>
+              <a href="/search/tor" class="navbar-link">Tor</a>
+              <a href="/shitpost/" class="navbar-link">Shitpost</a>
+              <a href="/photos/" class="navbar-link">Fotoalbum</a>
+              <a href="/about-me/" class="navbar-link">O mně</a>
+            </div>
+          </div>
+
+          <div id="overlay"></div>
+          <div id="simple-text-container">
+            <h1> AHOJ! </h1>
+            <div> Mé jméno je Michal Bořánek. Ale lepší bude mě oslovovat jako michaljef nebo jak ty uznáš za vhodné. <div>
+            <div> <div>
+            <h2> Tak teď tedy něco reálně o mě. </h2>
+            <div> Chodím na Střední Odborné Účeliště Elektrotechnické v Plzni. Chodím zde na Maturitní obor, což je level-up. Proč jsem si vybral SOUEPl? Protože nabízejí praktické vyučování, což je za mě podstatný. Také se mi nijak nezměnila cesta do školy (teda o 3 zastávky jo lmao). Jinak je to nejvíc random škola, ale jde to.. <div>
+            <div> <div>
+            <div>Abych pravdu řekl, jsem tzv. 'šotouš'. Co to znamená? Slovo šotouš značí člověka zajímajícího se o MHD (nehledě na typ), což je pro mě extrémní win, protože na to je Plzrň bohatá, SOUEPl mi navíc nabízí Praktické vyučování v Doudlevcích, díky čemuž můžu zahlédnout i výrobů vozů.<div>
+            <div>To tedy znamená že musím mít techniku na focení, že? Moje nástroje jsou Canon EOS 2000D a Xiaomi Redmi Note 8T. No není to nejlepší co se dá sehnat, ale né každý má tu možnost se vůbec k takové technice dostat.<div>
+            <div> <div>
+            <div>Tak teď nějaké moje plány:<div>
+              <div>1) Dodělat tuhle stránku<div>
+              <div>2) Dodělat školu (lmao)<div>
+              <div>3) Úspěšně se zůčastnit soutěže 'Czech Rocket Challange'. Je to soutěž, ve které sestavíme raketu, tu v den odpalu odpálíme. Oslovily jsme zástupce SOUEPl, a ten s náma je ochoten spolupracovat, tedy bude výhra na obou stranách, my se zůčastníme soutěže, a SOUEPl může mít materiál s odkazem na naší školu. (je tomu skutečně tak!)<div>
+          </div>
+
+                <div id="contact">
+                  <h2 class="contact-title">Kontakt</h2>
+                  <a href="mailto:me@michaljef.xyz" class="contact-button">Napiš mi na email   <i class="fa-solid fa-up-right-from-square"></i></a>
+                  <button class="contact-button" onclick="copyToClipboard('me@michaljef.xyz')">Zkpíruj email   <i class="fa-solid fa-copy"></i></button>
+                </div>
+
+          <script>
+            function copyToClipboard(text) {
+              const el = document.createElement('textarea');
+              el.value = text;
+              document.body.appendChild(el);
+              el.select();
+              document.execCommand('copy');
+              document.body.removeChild(el);
+              alert('Email copied to clipboard: ' + text);
+            }
+          </script>
+        </body>
+
+      </html>
